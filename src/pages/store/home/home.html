@@ -1,0 +1,132 @@
+<body style="margin:0; font-family:Arial, sans-serif; background:#ecfdf5;">
+
+<header style="
+  background: #065f46;
+  color: white;
+  padding: 15px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+">
+  
+  <h2 style="display:flex; align-items:center; gap:10px; margin:0;">
+    <img src="/src/assets/icono.svg" width="30" />
+    FoodStore
+  </h2>
+
+  <nav style="display:flex; gap:15px;">
+    <a href="./home.html" style="color:white; text-decoration:none;">Inicio</a>
+    
+    <a href="../cart/cart.html" style="color:white; position:relative; text-decoration:none;">
+      Carrito
+      <span id="contador-carrito" style="
+        position:absolute;
+        top:-8px;
+        right:-15px;
+        background:#22c55e;
+        color:white;
+        border-radius:50%;
+        padding:4px 7px;
+        font-size:11px;
+        font-weight:bold;
+      ">
+        0
+      </span>
+    </a>
+  </nav>
+
+</header>
+
+<div style="
+  padding:20px;
+  max-width:1100px;
+  margin:0 auto;
+  display:flex;
+  gap:30px;
+">
+
+  <div style="
+    width:220px;
+    background:white;
+    padding:15px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    height:fit-content;
+  ">
+
+    <h3 style="
+      color:#065f46;
+      margin-bottom:10px;
+      text-align:center;
+      border-bottom:1px solid #e5e7eb;
+      padding-bottom:6px;
+    ">
+      Categorias
+    </h3>
+
+    <div id="categorias" style="
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    "></div>
+
+  </div>
+
+  <div style="flex:1;">
+
+    <h2 style="color:#065f46; margin-bottom:10px;">
+      Todos los productos
+    </h2>
+
+    <div style="
+      position:relative;
+      margin-bottom:20px;
+    ">
+      <input 
+        type="text" 
+        id="buscador" 
+        placeholder="Buscar productos..." 
+        style="
+          width:100%;
+          padding:12px 12px 12px 40px;
+          border-radius:10px;
+          border:1px solid #d1d5db;
+          outline:none;
+          font-size:14px;
+          background:white;
+        "
+      />
+
+      <svg 
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#9ca3af"
+        stroke-width="2"
+        style="
+          position:absolute;
+          left:12px;
+          top:50%;
+          transform:translateY(-50%);
+          width:16px;
+          height:16px;
+        "
+      >
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </div>
+
+    <div id="productos" style="
+      display:flex;
+      flex-wrap:wrap;
+      gap:20px;
+    "></div>
+
+  </div>
+
+</div>
+
+<script type="module" src="./home.js"></script>
+
+</body>
